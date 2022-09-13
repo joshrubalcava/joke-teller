@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #45badd;
+}
+
+.button-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('/robot.gif') no-repeat left center;
+    background-size: contain;
+}
+
+.joke-button {
+    cursor: pointer;
+    outline: none;
+    font-family: 'Roboto Mono', sans-serif;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
+    background: #ff3482;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.joke-button:hover {
+    filter: brightness(95%);
+}
+
+.joke-button:active {
+    transform: scale(0.98);
+}
+
+.joke-button:disabled {
+    cursor: default;
+    filter: brightness(30%);
+}
+
+/* Media Query: Tablet or Smaller */
+@media screen and (max-width: 1000px) {
+    .button-container {
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .joke-button {
+        box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+    }
+}
